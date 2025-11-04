@@ -37,6 +37,12 @@ const UserSettings = Loader(
   lazy(() => import('src/content/applications/Users/settings'))
 );
 
+// Management
+
+const Properties = Loader(
+  lazy(() => import('src/content/management/Properties/PropertiesPage'))
+);
+
 // Components
 
 const Buttons = Loader(
@@ -83,7 +89,7 @@ const routes: RouteObject[] = [
     children: [
       {
         path: '/',
-        element: <Overview />
+        element: <Navigate to="dashboards" replace />
       },
       {
         path: 'overview',
@@ -149,6 +155,10 @@ const routes: RouteObject[] = [
       {
         path: 'transactions',
         element: <Transactions />
+      },
+      {
+        path: 'properties',
+        element: <Properties />
       },
       {
         path: 'profile',
