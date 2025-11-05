@@ -13,6 +13,7 @@ interface Property {
   address: string;
   rent: number;
   tenantId?: number;
+  createdAt: string;
   tenant?: {
     id: number;
     name: string;
